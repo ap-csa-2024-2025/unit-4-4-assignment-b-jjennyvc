@@ -9,7 +9,16 @@ public class Main
 
   public static int countSub(String word, String target)
   {
-    return 0;
+    int = 0;
+    for (int i = 0; i < word.length() - (target.length() - 1; i++))
+    {
+      String sub = word.substring(i, i + target.length());
+      if (sub.equals(target))
+      {
+        count++;
+      }
+    }
+    return count;
   }
 
   public static int countProperContains(String word, String target)
@@ -52,6 +61,10 @@ public class Main
 
   public static String deleteSub(String word, String target)
   {
+    while (word.indexOf(target) != -1)
+    {
+      word = word.substring(0, indesOfTarget) + word.substring(indexOfTarget + target.length());
+    }
     return null;
   }
 }
